@@ -3,7 +3,7 @@ import './index.css';
 
 export const Signup = () => {
     const onFinish = (values) => {
-        console.log('Success:', values);
+        const { emailId, firstName, lastName, password, confirmPassword } = values;
     };
 
     const onFinishFailed = (errorInfo) => {
@@ -14,29 +14,20 @@ export const Signup = () => {
         <>
             <Form
                 name="basic"
-                labelCol={{
-                    span: 8,
-                }}
-                wrapperCol={{
-                    span: 16,
-                }}
-                initialValues={{
-                    remember: true,
-                }}
+                labelCol={{span: 8}}
+                wrapperCol={{span: 16}}
+                initialValues={{remember: true}}
                 onFinish={onFinish}
                 onFinishFailed={onFinishFailed}
                 autoComplete="off"
-                style={{
-                    backgroundColor: 'white',
-                    padding: '7rem',
-                    width: '30%'
-                }}
                 className='flex flex_dcolumn align_center signup_form'
             >
                 <h3 className='text_center' style={{ fontWeight: 'bold' }}>Sign up</h3>
                 <Form.Item
                     label="Email Id"
                     name="emailId"
+                    hasFeedback
+                    validateStatus="validating"
                     rules={[
                         {
                             required: true,
@@ -44,7 +35,7 @@ export const Signup = () => {
                         },
                     ]}
                 >
-                    <Input />
+                    <Input placeholder='abc@gmail.com' />
                 </Form.Item>
                 <Form.Item
                     label="First name"
@@ -56,7 +47,7 @@ export const Signup = () => {
                         },
                     ]}
                 >
-                    <Input />
+                    <Input placeholder='first name' />
                 </Form.Item>
                 <Form.Item
                     label="Last name"
@@ -68,7 +59,7 @@ export const Signup = () => {
                         },
                     ]}
                 >
-                    <Input />
+                    <Input placeholder='lastname' />
                 </Form.Item>
 
                 <Form.Item
@@ -81,7 +72,7 @@ export const Signup = () => {
                         },
                     ]}
                 >
-                    <Input.Password />
+                    <Input.Password placeholder='******' />
                 </Form.Item>
                 <Form.Item
                     label="Confirm Password"
@@ -93,7 +84,7 @@ export const Signup = () => {
                         },
                     ]}
                 >
-                    <Input.Password />
+                    <Input.Password placeholder='******' />
                 </Form.Item>
 
                 <Form.Item
@@ -108,7 +99,7 @@ export const Signup = () => {
                         minWidth: '100%',
                     }}
                 >
-                    <Checkbox>Remember me</Checkbox>
+                    <Checkbox>Accept terms & conditions</Checkbox>
                 </Form.Item>
 
                 <Form.Item
