@@ -1,4 +1,5 @@
 import { Form, Input, Button, Checkbox } from 'antd';
+import './index.css';
 
 export const Signup = () => {
     const onFinish = (values) => {
