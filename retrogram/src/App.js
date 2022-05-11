@@ -4,8 +4,7 @@ import { AppstoreOutlined, MailOutlined, SettingOutlined, UserOutlined } from '@
 import { Posts } from "./posts";
 import { FriendsList } from "./friends";
 import { Header } from "./header";
-import { Login } from "./components/login";
-import { Signup } from "./components/signup/signup";
+import { Login, Signup } from "./components";
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -85,12 +84,12 @@ function App() {
           </section>
         </Col>
       </Row> */}
-      {/* <Row flex align="center" className="align_center app_layout">
+      <Row flex align="center" className="align_center app_layout">
         <Login />
-      </Row> */}
-      {/* <Row flex align="center" className="align_center app_layout">
+      </Row>
+      <Row flex align="center" className="align_center app_layout">
         <Signup />
-      </Row> */}
+      </Row>
     </>
   );
 }
