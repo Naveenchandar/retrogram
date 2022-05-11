@@ -1,0 +1,78 @@
+:root {
+  --main-bg: #fafbfd;
+  --padding1: 1rem;
+  --margin1: 1rem;
+  --active-link: #4c638e;
+}
+
+body {
+  background-color: var(--main-bg);
+}
+
+.app_layout {
+  background-color: var(--main-bg);
+  height: 100vh;
+}
+
+.ant-menu-item:hover {
+  background: var(--active-link);
+  /* to override default antd hover style, used important */
+  color: var(--white) !important;
+  border-radius: 0.7rem;
+}
+
+.ant-menu-item {
+  padding: var(--padding1);
+  /* to override default antd width style (.ant-menu-item), used important */
+  width: 20rem !important;
+  margin: 0 auto;
+}
+
+.ant-menu-root {
+  height: 100vh;
+}
+
+.ant-list-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.ant-list-vertical .ant-list-item {
+  align-items: initial;
+  background: white;
+  margin: 2rem;
+  margin-left: 0;
+  border-radius: 0.7rem;
+  border: 1px solid #fff;
+  padding: 0;
+}
+
+.ant-list-item > span {
+  display: block;
+  text-align: left;
+}
+
+.ant-list-item-action, .ant-list-item > span, .ant-list-vertical .ant-list-item-meta  {
+  padding: 1rem;
+}
+
+.ant-list-item-action {
+  margin-bottom: 1rem;
+}
+
+.ant-form-item {
+  width: 100%;
+}
+
+.signup_form .ant-form-item-label {
+  overflow: visible;
+  width: 100%;
+}
+
+.signup_form .ant-form-item-control-input {
+  margin-left: 2rem;
+}
+
+.signup_form .ant-form-item-label > label {
+  width: 100%;
+}
