@@ -1,0 +1,23 @@
+.login_form {
+    background-color: var(--white);
+    padding: 7rem;
+    width: 30%;
+    margin: 10% auto;
+}
+
+.login_checkbox {
+    min-width: 100%;
+}
+
+.no_account {
+    align-self: center;
+}
+
+.login_header {
+    font-weight: bold;
+}
+
+.error_text {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}

@@ -2,6 +2,7 @@
   background-color: var(--white);
   padding: 7rem;
   width: 30%;
+  margin: 10% auto;
 }
 
 .signup_form .ant-form-item-label {
